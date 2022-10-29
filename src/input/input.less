@@ -1,0 +1,213 @@
+:root {
+  --color-blank: #fff;
+  --input-font-size: 14px;
+  --input-bg-color: #fff;
+  --input-border-radius: 4px;
+  --input-border-color: #dcdfe6;
+  --transition-box-shadow: box-shadow 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  --text-color-placeholder: #a8abb2;
+  --transition-duration: 0.3s;
+  --input-height: 32px;
+  --input-inner-height: calc(var(--input-height, 32px) - 2px);
+  --input-text-color: #606266;
+  --disabled-bg-color: #f5f7fa;
+  --disabled-border-color: #e4e7ed;
+  --icon-size: 16px;
+  --font-size-base: 14px;
+}
+
+.fac-input.is-disabled {
+  cursor: not-allowed;
+
+  & .fac-input__wrapper {
+    background-color: var(--disabled-bg-color);
+    box-shadow: 0 0 0 1px var(--disabled-border-color) inset;
+  }
+
+  & .fac-input__inner {
+    color: var(--text-color-placeholder);
+    -webkit-text-fill-color: var(--text-color-placeholder);
+    cursor: not-allowed;
+  }
+}
+
+.fac-input {
+  position: relative;
+  font-size: var(--input-font-size);
+  display: inline-flex;
+  width: 100%;
+  line-height: var(--input-height);
+  box-sizing: border-box;
+  vertical-align: middle;
+
+  &-group__prepend,
+  &-group__append {
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 1px 0 0 0 var(--input-border-color) inset,
+      0 1px 0 0 var(--input-border-color) inset,
+      0 -1px 0 0 var(--input-border-color) inset;
+  }
+
+  &__wrapper {
+    display: inline-flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 11px;
+    background-color: var(--input-bg-color);
+    background-image: none;
+    border-radius: var(--input-border-radius);
+    transition: var(--transition-box-shadow);
+    box-shadow: 0 0 0 1px var(--input-border-color) inset;
+
+    &.is-focus {
+      box-shadow: 0 0 0 1px var(--color-primary) inset;
+    }
+  }
+
+  &__prefix {
+    display: inline-flex;
+    white-space: nowrap;
+    flex-shrink: 0;
+    flex-wrap: nowrap;
+    height: 100%;
+    text-align: center;
+    color: var(--text-color-placeholder);
+    transition: all var(--transition-duration);
+    pointer-events: none;
+
+    &-inner {
+      pointer-events: all;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      & > :first-child {
+        margin-left: 0;
+
+        &.fac-iput__icon {
+          margin-left: 0;
+        }
+      }
+
+      & > :last-child {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &__icon {
+    height: inherit;
+    line-height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all var(--transition-duration);
+    margin-left: 8px;
+  }
+
+  &__inner {
+    width: 100%;
+    flex-grow: 1;
+    color: var(--input-text-color);
+    font-size: inherit;
+    height: var(--input-inner-height);
+    line-height: var(--input-inner-height);
+    padding: 0;
+    outline: none;
+    border: none;
+    background: none;
+    box-sizing: border-box;
+  }
+
+  &__suffix {
+    display: inline-flex;
+    white-space: nowrap;
+    flex-shrink: 0;
+    flex-wrap: nowrap;
+    height: 100%;
+    text-align: center;
+    color: var(--text-color-placeholder);
+    transition: all var(--transition-duration);
+    pointer-events: none;
+
+    &-inner {
+      pointer-events: all;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__password,
+  &__clear {
+    color: var(--text-color-placeholder);
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  &__count {
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-info);
+    font-size: 12px;
+
+    &-inner {
+      background: var(--color-blank);
+      line-height: initial;
+      display: inline-block;
+      padding-left: 8px;
+    }
+  }
+}
+
+.fac-textarea {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: bottom;
+  font-size: var(--font-size-base);
+
+  &__inner {
+    position: relative;
+    display: block;
+    resize: vertical;
+    padding: 5px 11px;
+    line-height: 1.5;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: inherit;
+    font-family: inherit;
+    color: var(--input-text-color);
+    background-color: var(--input-bg-color);
+    background-image: none;
+    -webkit-appearance: none;
+    box-shadow: 0 0 0 1px var(--input-border-color) inset;
+    border-radius: var(--input-border-radius);
+    transition: var(--transition-box-shadow);
+    border: none;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 1px var(--color-primary) inset;
+    }
+  }
+
+  .fac-input__count {
+    color: var(--color-info);
+    background: var(--color-blank);
+    position: absolute;
+    font-size: 12px;
+    line-height: 14px;
+    bottom: 5px;
+    right: 10px;
+    height: initial;
+  }
+}
+
+.fac-icon {
+  font-size: var(--icon-size);
+}

@@ -1,0 +1,81 @@
+:root {
+  --pagination-bg-color: #fff;
+  --pagination-font-size: 14px;
+  --pagination-button-width: 32px;
+  --pagination-button-height: 32px;
+  --pagination-button-color: var(--color-text);
+  --pagination-hover-color: var(--color-primary);
+  --pagination-icon-color: var(--color-primary);
+  --text-color-placeholder: #a8abb2;
+}
+
+.fac-pagination {
+  white-space: nowrap;
+  padding: 2px 5px;
+  color: var(--el-pagination-text-color);
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+
+  button {
+    border: none;
+    padding: 0 6px;
+    background: transparent;
+  }
+
+  .fac-pager {
+    user-select: none;
+    list-style: none;
+    font-size: 0;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+
+    & > li {
+      padding: 0 4px;
+      background: var(--pagination-bg-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: var(--pagination-font-size);
+      min-width: var(--pagination-button-width);
+      height: var(--pagination-button-height);
+      line-height: var(--pagination-button-height);
+      box-sizing: border-box;
+      cursor: pointer;
+      text-align: center;
+      margin: 0 1px;
+
+      &.is-active {
+        color: var(--pagination-hover-color);
+        cursor: default;
+      }
+      &.is-disabled {
+        color: var(--text-color-placeholder);
+        cursor: not-allowed;
+      }
+      &.btn-quickprev,
+      &.btn-quicknext {
+        line-height: 32px;
+        color: var(--pagination-button-color);
+      }
+      & .icon {
+        color: var(--pagination-icon-color);
+      }
+    }
+
+  }
+
+  .btn-prev,
+  .btn-next {
+    background: center center no-repeat;
+    background-size: 16px;
+    background-color: var(--pagination-bg-color);
+    cursor: pointer;
+    margin: 0;
+    color: var(--pagination-button-color);
+
+    
+  }
+}
