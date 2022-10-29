@@ -7,20 +7,20 @@
 ### 安装
 
 #### CDN
-`facilely-ui.js` 包含组件库的所有样式和逻辑, 引入即可。
+`@funny-ui/ui.js` 包含组件库的所有样式和逻辑, 引入即可。
 
 ```html
 <!-- playground-ignore -->
 <div id="app"></div>
 <script src="https://cdn.jsdelivr.net/npm/vue@next"></script>
-<script src="https://cdn.jsdelivr.net/npm/facilely-ui/umd/varlet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@funny-ui/ui/umd/varlet.js"></script>
 <script>
-  import * as FacilelyUi from "facilely-ui";
+  import * as FunnyUi from "@funny-ui/ui";
 
   const app = Vue.createApp({
     template: '<fac-button>按钮</fac-button>'
   })
-  app.use(FacilelyUi).mount('#app')
+  app.use(FunnyUi).mount('#app')
 </script>
 ```
 
@@ -31,22 +31,22 @@
 # 通过 npm、yarn 或 pnpm 安装
 
 # npm
-npm i facilely-ui -S
+npm i @funny-ui/ui -S
 
 # yarn
-yarn add facilely-ui
+yarn add @funny-ui/ui
 
 # pnpm
-pnpm add facilely-ui
+pnpm add @funny-ui/ui
 ```
 
 ```js
 // playground-ignore
 import App from './App.vue'
-import FacilelyUi from 'facilely-ui'
+import FunnyUi from '@funny-ui/ui'
 import { createApp } from 'vue'
-import "facilely-ui/es/style.js";
+import "@funny-ui/ui/es/style.js";
 
-createApp(App).use(FacilelyUi).mount('#app')
+createApp(App).use(FunnyUi).mount('#app')
 ```
 

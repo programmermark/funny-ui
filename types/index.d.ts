@@ -12,12 +12,12 @@ export * from './space'
 
 declare module 'vue' {
   export interface GlobalComponents {
-    VarBasicComponent: typeof import('facilely-ui')['_BasicComponentComponent']
-    VarButton: typeof import('facilely-ui')['_ButtonComponent']
-    VarIcon: typeof import('facilely-ui')['_IconComponent']
-    VarInput: typeof import('facilely-ui')['_InputComponent']
-    VarLocale: typeof import('facilely-ui')['_LocaleComponent']
-    VarRipple: typeof import('facilely-ui')['_RippleComponent']
-    VarSpace: typeof import('facilely-ui')['_SpaceComponent']
+    VarBasicComponent: typeof import('@funny-ui/ui')['_BasicComponentComponent']
+    VarButton: typeof import('@funny-ui/ui')['_ButtonComponent']
+    VarIcon: typeof import('@funny-ui/ui')['_IconComponent']
+    VarInput: typeof import('@funny-ui/ui')['_InputComponent']
+    VarLocale: typeof import('@funny-ui/ui')['_LocaleComponent']
+    VarRipple: typeof import('@funny-ui/ui')['_RippleComponent']
+    VarSpace: typeof import('@funny-ui/ui')['_SpaceComponent']
   }
 }

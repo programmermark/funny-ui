@@ -18,10 +18,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/programmermark/facilely-ui.git"
+    "url": "https://github.com/programmermark/funny-ui.git"
   },
   "bugs": {
-    "url": "https://github.com/programmermark/facilely-ui/issues"
+    "url": "https://github.com/programmermark/funny-ui/issues"
   },
   "sideEffects": [
     "es/**/style/*",
@@ -121,9 +121,9 @@
     "types"
   ],
   "dependencies": {
+    "@funny-ui/icons": "^0.0.1",
     "@vue/shared": "^3.2.41",
     "@vueuse/core": "^9.3.1",
-    "facilely-icons": "^0.0.5",
     "lodash-es": "^4.17.21"
   }
 }

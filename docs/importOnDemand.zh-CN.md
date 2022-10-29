@@ -11,8 +11,8 @@
 ```js
 // playground-ignore
 import { createApp } from 'vue'
-import { Button } from 'facilely-ui/ui'
-import 'facilely-ui/es/button/style/index.js'
+import { Button } from '@funny-ui/ui/ui'
+import '@funny-ui/ui/es/button/style/index.js'
 
 createApp().use(Button)
 ```
@@ -22,8 +22,8 @@ createApp().use(Button)
 ```html
 // playground-ignore
 <script setup>
-import { Button as FacButton } from 'facilely-ui/ui'
-import 'facilely-ui/es/button/style/index.js'
+import { Button as FacButton } from '@funny-ui/ui/ui'
+import '@funny-ui/ui/es/button/style/index.js'
 </script>
 
 <template>
@@ -43,11 +43,11 @@ import 'facilely-ui/es/button/style/index.js'
 ```js
 // playground-ignore
 import App from './App.vue'
-// import FacilelyUi from 'facilely-ui'
+// import FunnyUi from '@funny-ui/ui'
 import { createApp } from 'vue'
-// mport "facilely-ui/es/style.js";
+// mport "@funny-ui/ui/es/style.js";
 
-// createApp(App).use(FacilelyUi).mount('#app')
+// createApp(App).use(FunnyUi).mount('#app')
 createApp(App).mount('#app')
 ```
 
@@ -58,13 +58,13 @@ createApp(App).mount('#app')
 # 安装插件
 
 # npm
-npm i unplugin-vue-components unplugin-auto-import facilely-resolver -D
+npm i unplugin-vue-components unplugin-auto-import @funny-ui/resolver -D
 
 # yarn
-yarn add unplugin-vue-components unplugin-auto-import facilely-resolver -D
+yarn add unplugin-vue-components unplugin-auto-import @funny-ui/resolver -D
 
 # pnpm
-pnpm add unplugin-vue-components unplugin-auto-import facilely-resolver -D
+pnpm add unplugin-vue-components unplugin-auto-import @funny-ui/resolver -D
 ```
 
 #### Vite
@@ -75,17 +75,17 @@ pnpm add unplugin-vue-components unplugin-auto-import facilely-resolver -D
 import vue from '@vitejs/plugin-vue'
 import components from 'unplugin-vue-components/vite'
 import autoImport from 'unplugin-auto-import/vite'
-import { FacilelyUIResolver } from 'facilely-resolver'
+import { FunnyUIResolver } from '@funny-ui/resolver'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
   plugins: [
     vue(),
     components({
-      resolvers: [FacilelyUIResolver()]
+      resolvers: [FunnyUIResolver()]
     }),
     autoImport({
-      resolvers: [FacilelyUIResolver({ autoImport: true })]
+      resolvers: [FunnyUIResolver({ autoImport: true })]
     })
   ]
 })
@@ -109,8 +109,8 @@ export default defineConfig({
 ```html
 // playground-ignore
 <script setup>
-import { Button as FacButton } from 'facilely-ui'
-import 'facilely-ui/es/button/style/index.js'
+import { Button as FacButton } from '@funny-ui/ui'
+import '@funny-ui/ui/es/button/style/index.js'
 
 function handleClick() {
   alert('你好!')

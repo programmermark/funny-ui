@@ -1,11 +1,11 @@
-# Ffacilely-ui
+# Funny-ui
 
 > 基于`vue3`，使用`[@varlet/cli](https://github.com/varletjs/varlet/blob/dev/packages/varlet-cli/README.md)`搭建的前端组件库。
 
 ### 文档参考
 
 [@varlet/cli 中文文档](https://github.com/varletjs/varlet/blob/dev/packages/varlet-cli/README.md)
-[facilely-ui 中文文档](https://facilely-ui.immortalboy.cn/#/zh-CN/home)
+[funny-ui 中文文档](https://@funny-ui/ui.immortalboy.cn/#/zh-CN/home)
 
 ### 待办清单
 
